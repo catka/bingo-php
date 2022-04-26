@@ -12,14 +12,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Elo'Bingo</title>
+    <title>Simple PHP Bingo</title>
 	<link rel="stylesheet" type="text/css" href="./style.css">
   </head>
 
   <body>
 	  <img src="./header.png" />
-		<h1>Elo'Bingo</h1>
-		<h2>(Nom déposé par Redily)</h2>
+		<h1>Simple PHP Bingo</h1>
 		
 		<ul class="commands">
 			<li>
@@ -29,19 +28,7 @@
 			</li>
 		</ul>
 		<div id="informations">
-			Complétez le bingo au fur et à mesure du live !<br />
-			Par ligne, colonne ou même en diagonale !<br />
-			<span class="important">Attention, recharger la page réinitialise votre grille.</span> (Bah oui, ça a été fait à l'arrache...)
-			<br />
-			Les cases du bingo ont été trouvées par Redily, Madilange et Setrianna.
-			<br /><br />
-			Ce site n'enregistre aucune donnée.
-			<br /><br />
-			<span class="host">
-				Hébergement<br />
-				OVH, 2 rue Kellermann<br />
-				59100 ROUBAIX, FRANCE
-			</span>
+			More information here
 		</div>
 		<div id="bingo">
 			<?php include('./grid.php'); ?>
@@ -49,8 +36,7 @@
 		
 		<div id="popup-bingo">
 			<div class="content">
-				
-				<span class="bingo-text">Bingo !</span>
+				<span class="bingo-text">Bingo!</span>
 			</div>
 		</div>
   </body>
