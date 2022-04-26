@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Abel;
+  src: url('./font/abel-regular.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+	background: linear-gradient(-15deg, #041b31, #7398b2);
+	text-align: center;
+	font-family: Abel, Calibri, Arial, Sans-Serif;
+}
+
+img{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h1{
+	font-size: 2.5em;
+}
+h1, h2{
+	text-align: center;
+}
+
+h2.old{
+	text-decoration: line-through;
+}
+
+.important{
+	font-weight: bold;
+}
+
+#sound, #sound-bingo{
+	display: none;
+}
+
+#bingo{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.card{
+	width: 19%;
+	margin-left: 1%;
+	margin-bottom: 1%;
+	background: #dbe4eb;
+	position: relative;
+	cursor: pointer;
+}
+.card:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.card .content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 15px;
+	font-size: 1.1em;
+}
+.card.checked{
+	background-color: #ffd977;
+	color: #062a4c;
+}
+.card.checked.bingo{
+	background: linear-gradient(-15deg, #ff0099, #fff700);
+}
+.card.checked.bingo:after{
+	content: "BINGO !!";
+	color: yellow;
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+.card:hover{
+	box-shadow: 0 0 5px #000000;
+	transform: scale(1.2);
+	transition: transform ease-in-out 0.2s;
+	z-index: 22;
+}
+
+#popup-bingo{
+	background-color: #000000b8;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+	display: none;
+}
+
+#popup-bingo canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+	opacity: 0.8;
+}
+#popup-bingo .content{
+	width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100vh;
+}
+#popup-bingo .content .bingo-text{
+	font-size: 3em;
+	color: yellow;
+	text-transform: uppercase;
+}
+#popup-bingo .content img{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+ul.commands{
+	padding: 0;
+	list-style-type: none;
+}
+ul.commands li{
+	display: inline-block;
+}
+ul.commands li button{
+	background: #ffd977;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+#informations{
+	display: none;
+	color: #ffffff;
+	padding: 10px;
+}
+.host{
+	font-size: 0.8em;
+}
